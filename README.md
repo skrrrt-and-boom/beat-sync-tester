@@ -6,10 +6,9 @@
 
 > Browser-based beat detection and music analysis tool. Upload audio, visualize beats on an interactive waveform, and export sync data.
 
-<!-- Add a GIF/screenshot here for maximum impact -->
-<!-- ![Demo](demo.gif) -->
-
 I vibecoded this for my own purposes and it turned out way more useful than expected. Sharing in hope that somebody else finds it helpful too.
+
+![Waveform Analysis](docs/screenshot-2-waveform.png)
 
 ## ✨ Features
 
@@ -17,7 +16,7 @@ I vibecoded this for my own purposes and it turned out way more useful than expe
 - 🌊 **Interactive Waveform** — Zoomable, scrollable visualization with [wavesurfer.js](https://wavesurfer.xyz/)
 - 🥁 **Drum Analysis** — Detects kicks, snares, and hi-hats using FFT spectral analysis
 - 🎼 **Section Detection** — Identifies intro, verse, chorus, drop, breakdown, outro
-- ✏️ **Manual Corrections** — Shift+click to add markers, right-click to remove (persisted in localStorage)
+- ✏️ **Manual Corrections** — Add/remove/drag beat markers to fix detection errors
 - 📊 **JSON Export** — Copy analysis data for integration with video editors or other tools
 
 ## 🚀 Quick Start
@@ -31,12 +30,35 @@ npm run dev
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-## 📖 Usage
+## 📖 How to Use
 
-1. **Load audio** — Drag & drop a file or paste a URL
-2. **Analyze** — Click "Analyze Beats" to run detection
-3. **Interact** — Click waveform to seek, Shift+click to add correction markers
-4. **Export** — Copy the JSON from the analysis panel
+### 1. Load Audio
+Drag & drop an audio file or paste a URL:
+
+![Upload Interface](docs/screenshot-1-empty.png)
+
+### 2. Analyze
+Click **"Analyze Beats"** to run the detection algorithm. Analysis takes 2-5 seconds depending on track length.
+
+### 3. Interact with Waveform
+Use keyboard shortcuts and mouse to navigate and correct:
+
+| Action | How |
+|--------|-----|
+| **Play / Pause** | `Space` or click ▶️ button |
+| **Seek** | Click anywhere on waveform |
+| **Add correction** | `Shift` + Click on waveform |
+| **Remove correction** | `Right-click` on a marker |
+| **Drag correction** | Click and drag orange markers |
+| **Zoom** | Use the zoom slider (top right) |
+
+### 4. Review Results
+See detected BPM, sections, and drum patterns:
+
+![Analysis Panel](docs/screenshot-3-analysis.png)
+
+### 5. Export
+Click **"Export JSON"** to copy the full analysis data to clipboard.
 
 ## 🎨 Marker Colors
 
@@ -50,6 +72,14 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 | 🟡 Yellow | Snare |
 | 🟢 Green | Hi-hat |
 | 🟠 Orange | Manual correction |
+
+## ⌨️ Keyboard Shortcuts
+
+| Key | Action |
+|-----|--------|
+| `Space` | Play / Pause |
+| `Shift + Click` | Add correction marker at click position |
+| `Right-click` | Remove correction marker |
 
 ## 🛠 Tech Stack
 
