@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   base: '/beat-sync-tester/', // Required for GitHub Pages
+  worker: {
+    format: 'es', // Use ES modules for workers (required for code-splitting)
+  },
 })
