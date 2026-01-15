@@ -33,9 +33,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 ## 📖 How to Use
 
 ### 1. Load Audio
-Drag & drop an audio file or paste a URL:
-
-![Upload Interface](docs/screenshot-1-empty.png)
+Drag & drop an audio file into the drop zone, or paste a URL and press Enter.
 
 ### 2. Analyze
 Click **"Analyze Beats"** to run the detection algorithm. Analysis takes 2-5 seconds depending on track length.
